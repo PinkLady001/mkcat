@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+.env
+
+# Playwright & Testing artifacts
+test-results/
+playwright-report/
+blob-report/
+.playwright/
+ms-playwright/
+
+# IDE & OS Files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Scanner Scan Outputs & Targets
+results.json
+results.jsonl
+targets.txt
+*.log
