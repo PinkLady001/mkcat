@@ -23,7 +23,7 @@ To publish and run `mkcat`, maintain the following directory layout:
 
 ```text
 .
-├── webcomponent_scanner.py   # Main executable CLI
+├── mkcat.py   # Main executable CLI
 ├── js/                       # Browser instrumentation scripts
 │   ├── init_script.js        # Shadow DOM instrumentation script
 │   └── classify_canary.js    # Canary reflection classifier
@@ -78,42 +78,42 @@ packaging>=20.0
 ### Basic Scan
 Scan a single target URL with default settings:
 ```bash
-python webcomponent_scanner.py target_url
+python mkcat.py target_url
 ```
 
 ### Batch Scanning from File
 Scan multiple targets listed in a text file and write structured JSON output:
 ```bash
-python webcomponent_scanner.py -i targets.txt -o results.json
+python mkcat.py -i targets.txt -o results.json
 ```
 
 ### JSON Lines Format
 Stream results as JSON Lines (one JSON object per line):
 ```bash
-python webcomponent_scanner.py -i targets.txt --jsonl
+python mkcat.py -i targets.txt --jsonl
 ```
 
 ### Scope Management & Domain Filtering
 Restrict navigations to a specific root domain and its subdomains:
 ```bash
-python webcomponent_scanner.py target_url --scope domain --scope-domain domain_name
+python mkcat.py target_url --scope domain --scope-domain domain_name
 ```
 
 Allow additional trusted domains under the default `allow` scope:
 ```bash
-python webcomponent_scanner.py target_url --allow-domain cdn_domain --allow-domain auth_domain
+python mkcat.py target_url --allow-domain cdn_domain --allow-domain auth_domain
 ```
 
 ### Enabling DOM Interactions
 Opt-in to click/hover event trigger testing on interactive components:
 ```bash
-python webcomponent_scanner.py target_url --interact
+python mkcat.py target_url --interact
 ```
 
 ### Testing Local Applications
 To run scans against a local test application on `localhost:8000`, use the `--allow-local-test` flag:
 ```bash
-python webcomponent_scanner.py local_target_url --allow-local-test
+python mkcat.py local_target_url --allow-local-test
 ```
 
 ---
