@@ -32,7 +32,7 @@ To publish and run `mkcat`, maintain the following directory layout:
 └── README.md                 # Project documentation
 ```
 
-> **Important**: The script resolves browser instrumentation scripts relative to its installation location (`./js/init_script.js` and `./js/classify_canary.js`). Ensure the `js/` directory is published alongside `webcomponent_scanner.py`.
+> **Important**: The script resolves browser instrumentation scripts relative to its installation location (`./js/init_script.js` and `./js/classify_canary.js`). Ensure the `js/` directory is published alongside `mkcat.py`.
 
 ---
 
@@ -182,10 +182,3 @@ Results are produced in a standardized v1.0 JSON format:
   }
 }
 ```
-
----
-
-## License
-
-This project is licensed under the MIT License.
-
